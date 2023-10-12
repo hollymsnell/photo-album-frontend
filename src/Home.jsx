@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { PhotosIndex } from "./PhotosIndex";
+import { PhotosNew } from "./PhotosNew";
 
   export function Home() {
     const [photos, setPhotos] = useState([]);
@@ -17,6 +18,7 @@ import { PhotosIndex } from "./PhotosIndex";
 
     return (
       <div>
+        <PhotosNew />
        <PhotosIndex photos={photos} />
       </div>
     );
