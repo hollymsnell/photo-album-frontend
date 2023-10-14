@@ -13,12 +13,20 @@ import { PhotosNew } from "./PhotosNew";
            setPhotos(response.data);
          });
        };
+
+       const handleCreatePhoto = (params, successCallback) => {
+            console.log("handleCreatePhoto", params);
+             axios.post("http://localhost:3000/photos.json", params).then((response) => {
+               setPhotos([...photos, response.data]);
+               successCallback();
+             });
+           };
     
        useEffect(handleIndexPhotos, []);
 
     return (
       <div>
-        <PhotosNew />
+        <PhotosNew onCreatePhoto={handleCreatePhoto}/>
        <PhotosIndex photos={photos} />
       </div>
     );

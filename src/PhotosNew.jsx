@@ -1,8 +1,15 @@
-export function PhotosNew() {
+export function PhotosNew(props) {
+
+  +   const handleSubmit = (event) => {
+  +     event.preventDefault();
+  +     const params = new FormData(event.target);
+  +     props.onCreatePhoto(params, () => event.target.reset());
+  +   };
+
   return (
     <div>
       <h1>New Photo</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           Name: <input name="name" type="text" />
         </div>
