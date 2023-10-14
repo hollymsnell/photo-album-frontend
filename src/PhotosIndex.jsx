@@ -5,7 +5,7 @@ export function PhotosIndex(props) {
       {props.photos.map((photo) => (
         <div key={photo.id}>
            <h2>{photo.name}</h2>
-           <img src={photo.url} />
+           <img src={photo.image} />
            <p>Width: {photo.width}</p>
            <p>Height: {photo.height}</p>
          </div>
