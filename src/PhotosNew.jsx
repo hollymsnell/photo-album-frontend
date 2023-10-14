@@ -1,10 +1,10 @@
 export function PhotosNew(props) {
 
-  +   const handleSubmit = (event) => {
-  +     event.preventDefault();
-  +     const params = new FormData(event.target);
-  +     props.onCreatePhoto(params, () => event.target.reset());
-  +   };
+     const handleSubmit = (event) => {
+       event.preventDefault();
+       const params = new FormData(event.target);
+       props.onCreatePhoto(params, () => event.target.reset());
+     };
 
   return (
     <div>
