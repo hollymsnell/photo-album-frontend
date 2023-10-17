@@ -6,6 +6,9 @@ import { Modal } from "./Modal";
 
   export function Home() {
     const [photos, setPhotos] = useState([]);
+    const [isPhotosShowVisible, setIsPhotosShowVisible] = useState(false);
+    const [currentPhoto, setCurrentPhoto] = useState({});
+
 
        const handleIndexPhotos = () => {
          console.log("handleIndexPhotos");
@@ -22,14 +25,25 @@ import { Modal } from "./Modal";
                successCallback();
              });
            };
+
+        const handleShowPhoto = (photo) => {
+                 console.log("handleShowPhoto", photo);
+                 setIsPhotosShowVisible(true);
+                 setCurrentPhoto(photo);
+               };
+            
+        const handleClose = () => {
+                 console.log("handleClose");
+                 setIsPhotosShowVisible(false);
+               };
     
        useEffect(handleIndexPhotos, []);
 
     return (
       <div>
         <PhotosNew onCreatePhoto={handleCreatePhoto}/>
-       <PhotosIndex photos={photos} />
-       <Modal show={true}>
+       <PhotosIndex photos={photos} onShowPhoto={handleShowPhoto} />
+       <Modal show={isPhotosShowVisible} onClose={handleClose}>
         <h1>test</h1>
        </Modal>
       </div>
