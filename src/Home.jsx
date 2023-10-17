@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { PhotosIndex } from "./PhotosIndex";
 import { PhotosNew } from "./PhotosNew";
+import { PhotosShow } from "./PhotosShow";
 import { Modal } from "./Modal";
 
   export function Home() {
@@ -44,7 +45,7 @@ import { Modal } from "./Modal";
         <PhotosNew onCreatePhoto={handleCreatePhoto}/>
        <PhotosIndex photos={photos} onShowPhoto={handleShowPhoto} />
        <Modal show={isPhotosShowVisible} onClose={handleClose}>
-        <h1>test</h1>
+       <PhotosShow photo={currentPhoto} />
        </Modal>
       </div>
     );
