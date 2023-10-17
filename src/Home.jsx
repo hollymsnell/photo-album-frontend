@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { PhotosIndex } from "./PhotosIndex";
 import { PhotosNew } from "./PhotosNew";
+import { Modal } from "./Modal";
 
   export function Home() {
     const [photos, setPhotos] = useState([]);
@@ -28,6 +29,9 @@ import { PhotosNew } from "./PhotosNew";
       <div>
         <PhotosNew onCreatePhoto={handleCreatePhoto}/>
        <PhotosIndex photos={photos} />
+       <Modal show={true}>
+        <h1>test</h1>
+       </Modal>
       </div>
     );
   }
