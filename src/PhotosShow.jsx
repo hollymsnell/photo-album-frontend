@@ -6,6 +6,10 @@ export function PhotosShow(props) {
          props.onUpdatePhoto(props.photo.id, params, () => event.target.reset());
        };
 
+  const handleClick = () => {
+    props.onDestroyPhoto(props.photo);
+  };
+
   return (
     <div>
       <h1>Photo information</h1>
@@ -28,6 +32,7 @@ export function PhotosShow(props) {
          </div>
          <button type="submit">Update photo</button>
        </form>
+       <button onClick={handleClick}>Destroy photo</button>
     </div>
   );
 }
