@@ -34,26 +34,34 @@ import { Modal } from "./Modal";
                };
 
         const handleUpdatePhoto = (id, params, successCallback) => {
-                  console.log("handleUpdatePhoto", params);
-                    axios.patch(`http://localhost:3000/photos/${id}.json`, params).then((response) => {
-                       setPhotos(
-                         photos.map((photo) => {
-                           if (photo.id === response.data.id) {
-                             return response.data;
-                           } else {
-                             return photo;
-                           }
-                         })
-                       );
-                       successCallback();
-                       handleClose();
-                     });
-                   };
+            console.log("handleUpdatePhoto", params);
+            axios.patch(`http://localhost:3000/photos/${id}.json`, params).then((response) => {
+                setPhotos(
+                  photos.map((photo) => {
+                    if (photo.id === response.data.id) {
+                      return response.data;
+                    } else {
+                      return photo;
+                    }
+                  })
+                 );
+                successCallback();
+                handleClose();
+              });
+            };
             
         const handleClose = () => {
                  console.log("handleClose");
                  setIsPhotosShowVisible(false);
                };
+
+        const handleDestroyPhoto = (photo) => {
+           console.log("handleDestroyPhoto", photo);
+           axios.delete(`http://localhost:3000/photos/${photo.id}.json`).then((response) => {
+                setPhotos(photos.filter((p) => p.id !== photo.id));
+                handleClose();
+              });
+             };
     
        useEffect(handleIndexPhotos, []);
 
@@ -62,7 +70,7 @@ import { Modal } from "./Modal";
         <PhotosNew onCreatePhoto={handleCreatePhoto}/>
        <PhotosIndex photos={photos} onShowPhoto={handleShowPhoto} />
        <Modal show={isPhotosShowVisible} onClose={handleClose}>
-       <PhotosShow photo={currentPhoto} onUpdatePhoto={handleUpdatePhoto}/>
+       <PhotosShow photo={currentPhoto} onUpdatePhoto={handleUpdatePhoto} onDestroyPhoto={handleDestroyPhoto}/>
        </Modal>
       </div>
     );
