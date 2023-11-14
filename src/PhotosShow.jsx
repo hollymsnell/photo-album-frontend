@@ -11,7 +11,7 @@ export function PhotosShow(props) {
   };
 
   return (
-    <div>
+    <div class="card">
       <h1>Photo information</h1>
       <p>Name: {props.photo.name}</p>
       <p>URL: {props.photo.image}</p>
