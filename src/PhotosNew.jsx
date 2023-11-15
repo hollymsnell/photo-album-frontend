@@ -17,7 +17,7 @@ export function PhotosNew(props) {
           Location: <input name="location" type="text" />
         </div>
         <div>
-          Url: <input name="image" type="text" />
+          Url: <input name="image" type="file" />
         </div>
         <div>
           Width: <input name="width" type="text" />
