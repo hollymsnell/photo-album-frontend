@@ -24,5 +24,7 @@ html {
     color: #eee;
     background-color: rgb(234, 129, 161);
     border-radius: 10px;
+    height: 30px;
+    width: 75px;
   }
 }
