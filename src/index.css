@@ -27,4 +27,18 @@ html {
     height: 30px;
     width: 75px;
   }
+
+  .newinput {
+    border-radius: 5px;
+  }
+
+  .newphoto {
+    background-color: antiquewhite;
+    padding-left: 20px;
+  }
+
+  .createphoto {
+    border-radius: 5px;
+    height: 25px;
+  }
 }

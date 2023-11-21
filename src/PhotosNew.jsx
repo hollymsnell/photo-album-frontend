@@ -7,25 +7,25 @@ export function PhotosNew(props) {
      };
 
   return (
-    <div>
+    <div class="newphoto">
       <h1>New Photo</h1>
       <form onSubmit={handleSubmit}>
-        <div>
-          Name: <input name="name" type="text" />
+        <div >
+          Name: <input class="newinput" name="name" type="text" />
         </div>
         <div>
-          Location: <input name="location" type="text" />
+          Location: <input class="newinput" name="location" type="text" />
         </div>
         <div>
-          Url: <input name="image" type="file" />
+          Url: <input class="newinput" name="image" type="file" />
         </div>
         <div>
-          Width: <input name="width" type="text" />
+          Width: <input class="newinput" name="width" type="text" />
         </div>
         <div>
-          Height: <input name="height" type="text" />
+          Height: <input class="newinput" name="height" type="text" />
         </div>
-        <button type="submit">Create photo</button>
+        <button class="createphoto" type="submit">Create photo</button>
       </form>
     </div>
   );
