@@ -6,8 +6,7 @@ export function PhotosIndex(props) {
         <div class="card" key={photo.id}>
            <h2>{photo.name}</h2>
            <img class="img" src={photo.image} />
-           <p>Width: {photo.width}</p>
-           <p>Height: {photo.height}</p>
+           <p>{photo.location}</p>
            <button class="moreinfo" onClick={() => props.onShowPhoto(photo)}>More info</button>
          </div>
        ))}

@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   margin-left: 20px;
+  background-image: url("https://img.freepik.com/premium-photo/abstract-background_196038-15399.jpg");
   
   
   .card {
@@ -11,7 +12,7 @@ html {
     border: 4px solid #222222;
     border-radius: 10px;
     margin-right: 20px;
-    padding-right: 20px
+    padding-bottom: 20px;
   }
 
   .img {
@@ -35,6 +36,9 @@ html {
   .newphoto {
     background-color: antiquewhite;
     padding-left: 20px;
+    padding-top: 1px;
+    padding-bottom: 20px;
+    border-radius: 10px;
   }
 
   .createphoto {
