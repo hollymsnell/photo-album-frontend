@@ -15,6 +15,7 @@ html {
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 20px;
+    margin-bottom: 20px;
   }
 
   .img {
@@ -48,12 +49,14 @@ html {
 
   .createphoto {
     border-radius: 5px;
-    height: 25px;
+    width: 100px;
+    height: 30px;
     background-color: teal;
     color: white;
   }
 
   .updatebutton {
+    display: block;
     background-color: plum;
     border-radius: 6px;
     padding-left: 8px;
@@ -63,6 +66,7 @@ html {
   }
 
   .destroybutton {
+    display: block;
     background-color: plum;
     border-radius: 6px;
     padding-left: 6px;
