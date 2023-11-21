@@ -34,9 +34,9 @@ export function PhotosShow(props) {
          <div>
            Height: <input defaultValue="props.photo.height" name="height" type="text" />
          </div>
-         <button type="submit">Update photo</button>
+         <button class="updatebutton" type="submit">Update photo</button>
        </form>
-       <button onClick={handleClick}>Destroy photo</button>
+       <button class="destroybutton" onClick={handleClick}>Destroy photo</button>
     </div>
   );
 }

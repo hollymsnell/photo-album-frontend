@@ -47,4 +47,22 @@ html {
     background-color: teal;
     color: white;
   }
+
+  .updatebutton {
+    background-color: plum;
+    border-radius: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  .destroybutton {
+    background-color: plum;
+    border-radius: 6px;
+    padding-left: 6px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
 }
