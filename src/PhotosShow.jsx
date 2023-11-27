@@ -16,8 +16,6 @@ export function PhotosShow(props) {
       <p>Name: {props.photo.name}</p>
       <p>URL: {props.photo.image}</p>
       <p>Location: {props.photo.location}</p>
-      <p>Width: {props.photo.width}</p>
-      <p>Height: {props.photo.height}</p>
       <form onSubmit={handleSubmit}>
          <div>
            Name: <input defaultValue="props.photo.name" name="name" type="text" />
