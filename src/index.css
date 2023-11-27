@@ -93,4 +93,18 @@ html {
   .updateinput {
     border-radius: 5px;
   }
+
+  .photoinfo {
+    background-color: grey;
+    border: 4px solid black;
+  }
+
+  .newinfo {
+    background-color: beige;
+    border: 4px solid black;
+  }
+
+  .modalbuttons {
+    display: flex;
+  }
 }
