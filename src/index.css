@@ -17,6 +17,7 @@ html {
     flex: 1;
     margin: .5rem;
     min-width: 350px;
+    max-width: 400px;
     background-image: url("https://thumb.ac-illust.com/96/9652359b7809389cf273d1915e775f56_t.jpeg");
     background-size: cover;
     height: 100%;
