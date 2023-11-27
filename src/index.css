@@ -89,4 +89,8 @@ html {
     padding-top: 3px;
     padding-bottom: 3px;
   }
+
+  .updateinput {
+    border-radius: 5px;
+  }
 }

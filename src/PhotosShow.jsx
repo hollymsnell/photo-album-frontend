@@ -18,13 +18,13 @@ export function PhotosShow(props) {
       <p>Location: {props.photo.location}</p>
       <form onSubmit={handleSubmit}>
          <div>
-           Name: <input defaultValue="props.photo.name" name="name" type="text" />
+           Name: <input class="updateinput" defaultValue="" name="name" type="text" />
          </div>
          <div>
-           URL: <input defaultValue="props.photo.image" name="image" type="text" />
+           URL: <input class="updateinput" defaultValue="" name="image" type="text" />
          </div>
          <div>
-           Location: <input defaultValue="props.photo.location" name="location" type="text" />
+           Location: <input class="updateinput" defaultValue="" name="location" type="text" />
          </div>
          <button class="updatebutton" type="submit">Update photo</button>
        </form>
