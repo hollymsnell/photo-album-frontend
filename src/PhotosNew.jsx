@@ -19,12 +19,6 @@ export function PhotosNew(props) {
         <div>
           Url: <input class="newinput" name="image" type="text" />
         </div>
-        <div>
-          Width: <input class="newinput" name="width" type="text" />
-        </div>
-        <div>
-          Height: <input class="newinput" name="height" type="text" />
-        </div>
         <button class="createphoto" type="submit">Create photo</button>
       </form>
     </div>
