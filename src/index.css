@@ -15,7 +15,7 @@ html {
   
   .card {
     flex: 1;
-    margin: 1rem;
+    margin: .5rem;
     min-width: 350px;
     background-image: url("https://thumb.ac-illust.com/96/9652359b7809389cf273d1915e775f56_t.jpeg");
     background-size: cover;
