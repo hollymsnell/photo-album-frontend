@@ -28,12 +28,6 @@ export function PhotosShow(props) {
          <div>
            Location: <input defaultValue="props.photo.location" name="location" type="text" />
          </div>
-         <div>
-           Width: <input defaultValue="props.photo.width" name="width" type="text" />
-         </div>
-         <div>
-           Height: <input defaultValue="props.photo.height" name="height" type="text" />
-         </div>
          <button class="updatebutton" type="submit">Update photo</button>
        </form>
        <button class="destroybutton" onClick={handleClick}>Destroy photo</button>
