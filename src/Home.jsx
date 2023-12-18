@@ -13,7 +13,7 @@ import { Modal } from "./Modal";
 
        const handleIndexPhotos = () => {
          console.log("handleIndexPhotos");
-         axios.get("http://localhost:3000/photos.json").then((response) => {
+         axios.get("/photos.json").then((response) => {
            console.log(response.data);
            setPhotos(response.data);
          });
@@ -21,7 +21,7 @@ import { Modal } from "./Modal";
 
        const handleCreatePhoto = (params, successCallback) => {
             console.log("handleCreatePhoto", params);
-             axios.post("http://localhost:3000/photos.json", params).then((response) => {
+             axios.post("/photos.json", params).then((response) => {
                setPhotos([...photos, response.data]);
                successCallback();
              });
@@ -35,7 +35,7 @@ import { Modal } from "./Modal";
 
         const handleUpdatePhoto = (id, params, successCallback) => {
             console.log("handleUpdatePhoto", params);
-            axios.patch(`http://localhost:3000/photos/${id}.json`, params).then((response) => {
+            axios.patch(`/photos/${id}.json`, params).then((response) => {
                 setPhotos(
                   photos.map((photo) => {
                     if (photo.id === response.data.id) {
@@ -57,7 +57,7 @@ import { Modal } from "./Modal";
 
         const handleDestroyPhoto = (photo) => {
            console.log("handleDestroyPhoto", photo);
-           axios.delete(`http://localhost:3000/photos/${photo.id}.json`).then((response) => {
+           axios.delete(`/photos/${photo.id}.json`).then((response) => {
                 setPhotos(photos.filter((p) => p.id !== photo.id));
                 handleClose();
               });
